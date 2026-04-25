@@ -1,7 +1,8 @@
 version: v2
-clean: true
 plugins:
   - remote: buf.build/protocolbuffers/python
+    out: src/openzerg_common/gen
+  - remote: buf.build/protocolbuffers/pyi
     out: src/openzerg_common/gen
   - remote: buf.build/connectrpc/python
     out: src/openzerg_common/gen
