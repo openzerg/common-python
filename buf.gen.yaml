@@ -1,8 +1,10 @@
 version: v2
 plugins:
-  - remote: buf.build/protocolbuffers/python
+  - remote: buf.build/connectrpc/python:v0.9.0
     out: src/openzerg_common/gen
-  - remote: buf.build/protocolbuffers/pyi
+  # connectrpc/python depends on protocolbuffers/python
+  - remote: buf.build/protocolbuffers/python:v34.0
     out: src/openzerg_common/gen
-  - remote: buf.build/connectrpc/python
+  # protocolbuffers/python depends on protocolbuffers/pyi
+  - remote: buf.build/protocolbuffers/pyi:v34.0
     out: src/openzerg_common/gen
